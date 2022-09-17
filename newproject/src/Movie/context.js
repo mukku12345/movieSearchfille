@@ -3,7 +3,7 @@ import React, { useContext,useEffect,useState } from "react";
 const AppContext =React.createContext();
 
 // const API_url =`https://api.tvmaze.com/search/shows?q=friends`
-export const API_url =`https://www.omdbapi.com/?apikey=727bbdc1&s="" `;
+export const API_url =`https://www.omdbapi.com/?apikey=7292aec8&s=""`;
 const AppProvider = ({children})=>{
     const[isLoading,setIsLoading] = useState(true);
             const[movie,setMovie] =useState([]);
