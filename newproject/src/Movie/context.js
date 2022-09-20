@@ -2,14 +2,14 @@ import React, { useContext,useEffect,useState } from "react";
 
 const AppContext =React.createContext();
 
-// const API_url =`https://api.tvmaze.com/search/shows?q=friends`
-export const API_url =`https://www.omdbapi.com/?apikey=7292aec8&s=""`;
+export const API_url =`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY} `;
+// export const API_url =`https://www.omdbapi.com/?apikey=727bbdc1&s=""`;
 const AppProvider = ({children})=>{
     const[isLoading,setIsLoading] = useState(true);
             const[movie,setMovie] =useState([]);
      const[isError,setIsError]    = useState({show:"false",msg:""});
       const[query,setQuery] =useState("");
-
+    
     const getMovies =async (url)=>{
         setIsLoading(true);
        try{
