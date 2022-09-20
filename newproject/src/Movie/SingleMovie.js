@@ -34,7 +34,7 @@ return ()=>clearTimeout(debouncing);
 if(isLoading){
     return(
         <div >
-            <div className="loading">Loading...</div>
+            <div className="loading">LOADING...</div>
         </div>
     )
 }
